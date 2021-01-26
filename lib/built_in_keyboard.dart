@@ -294,6 +294,13 @@ class BuiltInKeyboardState extends State<BuiltInKeyboard> {
         letters = 'azertyuiopqsdfghjklmwxcvbn'.split("");
       }
     }
+    else if (layoutType == 'AR') {
+      if (widget.enableAllUppercase || capsLockUppercase) {
+        letters = 'ًٌَُلإإ‘÷×؛<>ٍِ][لأأـ،/:"~ْ}{لآآ’,.؟س'.toUpperCase().split("");
+      } else {
+        letters = 'ضصثقفغعهخحجدشسيبلاتنمكطئءؤرلاىةوزظ'.toUpperCase().split("");
+      }
+    }
 
     List<Widget> keyboard = [];
     letters.forEach((String letter) {
